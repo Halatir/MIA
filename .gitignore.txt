@@ -1,0 +1,12 @@
+
+# Created by https://www.gitignore.io/api/vvvv
+
+### VVVV ###
+
+# .v4p backup files
+*~.xml
+
+# Dynamic plugins .dll
+bin/
+
+# End of https://www.gitignore.io/api/vvvv
