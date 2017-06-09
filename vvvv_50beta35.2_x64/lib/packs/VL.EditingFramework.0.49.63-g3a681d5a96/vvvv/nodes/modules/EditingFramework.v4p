@@ -1,0 +1,479 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
+   <PATCH nodename="C:\Work\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\EditingFramework.v4p" scrollx="0" scrolly="-1299" systemname="EditingFramework" filename="C:\Work\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\EditingFramework.v4p">
+   <BOUNDS type="Window" left="495" top="315" width="10020" height="9495">
+   </BOUNDS>
+   <NODE systemname="PointEditor (2d)" filename="PointEditor (2d).v4p" nodename="PointEditor (2d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="5505" top="5460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="5460">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6630" top="1545" width="15480" height="8190">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5505" top="4950" width="330" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="4950" width="525" height="375">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="2D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE systemname="BezierPatchEditor (2d)" filename="BezierPatchEditor (2d).v4p" nodename="BezierPatchEditor (2d)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="5505" top="7005" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="7005">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7890" top="2640" width="17295" height="9960">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="MeshEditor (EX9)" filename="DX9\MeshEditor (EX9).v4p" nodename="MeshEditor (EX9)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="7680" top="7755" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7680" top="7755">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="PointEditor (3d)" filename="PointEditor (3d).v4p" nodename="PointEditor (3d)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="7680" top="5460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7680" top="5460">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4515" top="825" width="19245" height="7980">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BezierPatchEditor (3d)" filename="BezierPatchEditor (3d).v4p" nodename="BezierPatchEditor (3d)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="7680" top="7005" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7680" top="7005">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7680" top="4950" width="330" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7680" top="4950" width="525" height="375">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="3D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="255" left="120" top="435" type="Node" width="570">
+   </BOUNDS>
+   <BOUNDS height="240" left="120" top="435" type="Box" width="2085">
+   </BOUNDS>
+   <BOUNDS height="160" left="9060" top="15120" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|An Overview and basic help.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="120" top="75" type="Node" width="915">
+   </BOUNDS>
+   <BOUNDS height="390" left="120" top="75" type="Box" width="4095">
+   </BOUNDS>
+   <BOUNDS height="160" left="9060" top="15120" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Editing Framework|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="18" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2145" top="5385" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2145" top="5385" width="2730" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Editor for transforming point clouds in the Renderer.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="19" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2145" top="6195" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2145" top="6195" width="1800" height="510">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Editor for bézier splines in the Renderer.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2145" top="6990" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2145" top="6990" width="2580" height="480">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Editor for modifying a bézier patch in the Renderer.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="5385" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="5385" width="1230" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="PointEditor">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="6195" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="6195" width="1770" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="BezierEditor">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="26" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="6990" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="6990" width="1770" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="BezierPatchEditor">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="28" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2145" top="7785" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2145" top="7785" width="2745" height="480">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Editor for transforming the vertices of a mesh in the Renderer.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="27" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="7785" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="7785" width="1770" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="MeshEditor">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="29" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5505" top="7755" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="7755" width="405" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="---">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="2475" width="4830" height="1320">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="2475" width="2865" height="720">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- click or click-drag to select points&cr;&lf;- press DEL to remove selected points|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="31" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3780" top="2805" width="4830" height="1320">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3780" top="2805" width="2115" height="765">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- leftmouse drag: X axis&cr;&lf;- middlemouse drag: Y axis&cr;&lf;- rightmouse drag: Z axis |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="4080" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="4080" width="1755" height="360">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|List of Editors|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="4470" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="4470" width="3030" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Check their helppatches for more specific info and their own Shortcuts.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="40" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="990" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="990" width="1755" height="360">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Basic Help|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="2115" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="2115" width="2160" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Add / Select / Remove Points|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="42" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3405" top="2115" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3405" top="2115" width="1980" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Dragging Points|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="44" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3405" top="2475" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3405" top="2475" width="330" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="2D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3405" top="2790" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3405" top="2790" width="330" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="3D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="47" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3795" top="2475" width="4830" height="1320">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3795" top="2475" width="1905" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- leftmouse drag: XY axis|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="48" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6450" top="2475" width="4830" height="1320">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6450" top="2475" width="1530" height="465">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- hold C to rotate&cr;&lf;- hold X to scale|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="49" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6435" top="2115" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6435" top="2115" width="1920" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|While draging points:&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="50" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="1380" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="1380" width="4395" height="480">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|The most common Shortcuts.&cr;&lf;For the more specific Shortcuts check the Editor&apos;s helppatch.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="51" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="1860" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="1860" width="8295" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="-------------------------------------------------------------------------------------------------------------">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="52" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="135" top="3525" width="5475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="135" top="3525" width="8280" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="-------------------------------------------------------------------------------------------------------------">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="34.101.0">
+   </PACK>
+   <NODE systemname="BezierEditor (2d)" filename="BezierEditor (2d).v4p" nodename="BezierEditor (2d)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="5505" top="6270" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="6270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4860" top="1590" width="20880" height="11640">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BezierEditor (3d)" filename="BezierEditor (3d).v4p" nodename="BezierEditor (3d)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="7680" top="6270" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7680" top="6270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5595" top="1890" width="19785" height="8250">
+   </BOUNDS>
+   </NODE>
+   </PATCH>

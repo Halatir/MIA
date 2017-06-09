@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="TDkApTiNwk3QAQTCqq50KS" Version="0.48">
+  <p:NodeReference>
+    <Choice Kind="Document" />
+  </p:NodeReference>
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+  <NugetDependency Id="QkQCXVu2FtFLeIWp4fgSZK" Location="VL.CoreLib" Version="0.36.34" />
+  <NugetDependency Id="J5k1IpbRi2jNhFbqvVAtkV" Location="VL.CoreLib.VVVV" Version="0.36.34" />
+  <NugetDependency Id="HJE8HlytCeiPGTprN3c5Ro" Location="VL.Core" Version="0.36.34" />
+  <Patch Id="KeYXSqp4qIjMsgC5i6rKOU">
+    <Canvas Id="EuHvFXh98NsNT8OzPc1RwZ">
+      <!--
+
+    ************************ ArtNetDecoder (Internal) ************************
+
+-->
+      <Node Name="ArtNetDecoder (Internal)" Category="VVVV.Network" Bounds="100,200" Id="FjXdm7dUxLFOKI9qCQWnmC">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="SLT60Srg3lDOYDq8Xj4LtO">
+          <Patch Id="OPmBX81BT1ZQI1hC8ouHq6" Name="Create">
+            <p:Info />
+          </Patch>
+          <Patch Id="AAnbEy8LWeCPwm309mfqPh" Name="Update">
+            <Pin Id="T0x0SyqmZuMLlQ3ILgZUuF" Name="Packet" Kind="InputPin" />
+            <Pin Id="G8TpXP3PUfcMqiEoBZ68Ju" Name=" Net" Kind="InputPin" />
+            <Pin Id="Fczy165GryePYzM716sfJJ" Name="Subnet" Kind="InputPin" />
+            <Pin Id="EVipKRu8vK4Oc6C1nuGCJ8" Name="Universe" Kind="InputPin" />
+            <Pin Id="QcBxT2gzj09OoMZJjPWjrb" Name="Result" Kind="OutputPin" />
+            <p:Info />
+          </Patch>
+          <Canvas Id="Dlky5IXilIgQKQ3lowN56t" Position="100,200">
+            <Node Bounds="339,408,94,13" Id="BZCVjzRv8s3MC2cEC3Atga">
+              <p:NodeReference LastCategoryFullName="IO.ArtNet" LastSymbolSource="VL.Artnet.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="IO" />
+                <CategoryReference Kind="Category" Name="ArtNet" />
+                <Choice Kind="ProcessAppFlag" Name="ArtNetDecoder" />
+              </p:NodeReference>
+              <Pin Id="HNylJMwehnFOrQsXitnwsH" Name="Packet" Kind="InputPin" />
+              <Pin Id="Cq2MxZtiu0WLOygsF7KzDK" Name="Net" Kind="InputPin" />
+              <Pin Id="D8fxexATJ1HLTjlRrM4Dpx" Name="Subnet" Kind="InputPin" />
+              <Pin Id="Ey0Bthm2rFONBbhF9tyQJK" Name="Universe" Kind="InputPin" />
+              <Pin Id="Jc1aKtgZX9PLia5GBID15u" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="VJXw8g3RMVbOxwHFGvDuQh" Bounds="375,269" />
+            <ControlPoint Id="IOjFqOtGKFLM9mjCiGV6mz" Bounds="416,269" />
+            <ControlPoint Id="CPf9G6gzKQXPpcRlHp0IjY" Bounds="475,269" />
+            <ControlPoint Id="JVcgNgF4ybfOgdeJqTuPUI" Bounds="341,500" />
+            <Node Bounds="301,318,44,13" Id="CI8fh5Fx2tfMjjmjGQoxVV">
+              <p:NodeReference LastCategoryFullName="IO.Stream" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ReadAll" />
+              </p:NodeReference>
+              <Pin Id="EZ1Kr22i9ELQE2E50mhNqb" Name="Input" Kind="InputPin" />
+              <Pin Id="MBjebpAxNczLdFAQOBYKI5" Name="Output" Kind="OutputPin" />
+              <Pin Id="L0Pyvy3HA8JNGABSSHds3E" Name="Data" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="QdbzucNMTpjLd2s3da3dRt" Bounds="304,270" />
+          </Canvas>
+          <Link Id="EjVeVvDDwxwNFobyWglaVq" Ids="G8TpXP3PUfcMqiEoBZ68Ju,VJXw8g3RMVbOxwHFGvDuQh" IsHidden="true" />
+          <Link Id="Lphgj04d0O5QG3cV4WhHsQ" Ids="Fczy165GryePYzM716sfJJ,IOjFqOtGKFLM9mjCiGV6mz" IsHidden="true" />
+          <Link Id="SuFRxO6AguGPhherLOrnpd" Ids="EVipKRu8vK4Oc6C1nuGCJ8,CPf9G6gzKQXPpcRlHp0IjY" IsHidden="true" />
+          <Link Id="VjAtgIGQmy3OrE2pLBK3q6" Ids="JVcgNgF4ybfOgdeJqTuPUI,QcBxT2gzj09OoMZJjPWjrb" IsHidden="true" />
+          <Link Id="PMoP2mgGGRJMgcoetnW2sI" Ids="IOjFqOtGKFLM9mjCiGV6mz,D8fxexATJ1HLTjlRrM4Dpx" />
+          <Link Id="UrvTMRF4l87ODcFC3hHqcm" Ids="CPf9G6gzKQXPpcRlHp0IjY,Ey0Bthm2rFONBbhF9tyQJK" />
+          <Link Id="L6sm5rp5UZ9NvDh5xIrEig" Ids="VJXw8g3RMVbOxwHFGvDuQh,Cq2MxZtiu0WLOygsF7KzDK" />
+          <ProcessDefinition Id="F5a33go477SQOLj1PEjKlh">
+            <Fragment Id="F49EbwHidf0Oq8rNwVO28g" Patch="OPmBX81BT1ZQI1hC8ouHq6" Enabled="true" />
+            <Fragment Id="H2Vgrkxph4kOPYdDuxiXTW" Patch="AAnbEy8LWeCPwm309mfqPh" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="EwhQLMqkSJLQPJIiTijIw4" Ids="QdbzucNMTpjLd2s3da3dRt,EZ1Kr22i9ELQE2E50mhNqb" />
+          <Link Id="SuRGvHTIikxLjHfrHt55Xs" Ids="T0x0SyqmZuMLlQ3ILgZUuF,QdbzucNMTpjLd2s3da3dRt" IsHidden="true" />
+          <Link Id="DORDrwucH1aQLdAR6sKYMg" Ids="L0Pyvy3HA8JNGABSSHds3E,HNylJMwehnFOrQsXitnwsH" />
+          <Link Id="L8kIwKMR0awQV1NngSyAgP" Ids="Jc1aKtgZX9PLia5GBID15u,JVcgNgF4ybfOgdeJqTuPUI" />
+        </Patch>
+      </Node>
+      <Canvas Id="QVK7vlVTyRQOln4VKeSqvA" Name="ArtNetNodes" Position="450,200" DefaultCategory="VVVV.Network">
+        <!--
+
+    ************************ ArtDMXEncode (Internal) ************************
+
+-->
+        <Node Name="ArtDMXEncode (Internal)" Bounds="13,185,218,160" Id="OAyDuWWGVrXOFS8X36aiqx">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="JpdLsBvIujJPFlunqwAmpw">
+            <Pin Id="NbyuynOoGgwOtH3kXUuwOZ" Name="Values" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="CommonLanguageRuntimeLibrary" ReferenceKind="App">
+                <Choice Kind="TypeFlag" Name="Sequence" />
+                <p:TypeArguments>
+                  <TypeReference ReferenceKind="App">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Lsmd60GlmIDOedJFeGikM0" Name="Net" Kind="InputPin" />
+            <Pin Id="At04fPIyukGPDX1mszzZw3" Name="Subnet" Kind="InputPin" />
+            <Pin Id="H91e8VlfbhsNKPYuNpIizO" Name="Universe" Kind="InputPin" />
+            <Pin Id="FDpV6LTCiIIP4eG3H1ffHW" Name="Result" Kind="OutputPin" />
+            <Node Bounds="28,287,53,13" Id="P7HIzZjk0skLomG8gSggbI">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.CoreLib.dll" LastPackageId="VL.CoreLib">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ToStream" />
+              </p:NodeReference>
+              <Pin Id="Khhg3Hu9v4gL4c6b2mMczt" Name="Input" Kind="InputPin" />
+              <Pin Id="PoEK2rk4i6TLTkTbaJoFt5" Name="Result" Kind="OutputPin" />
+              <Pin Id="JjI6NDAHrUhNPmKrfVan2f" Name="Writeable" Kind="InputPin" />
+            </Node>
+            <Node Bounds="28,248,94,13" Id="R2FnmMwyrbbPJ6ugyaKuVb">
+              <p:NodeReference LastCategoryFullName="IO.ArtNet" LastSymbolSource="VL.Artnet.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="ArtNet" />
+                <Choice Kind="OperationCallFlag" Name="ArtDMXEncode" />
+              </p:NodeReference>
+              <Pin Id="GLgNVh6359UPP0mwhAJmWX" Name="Data" Kind="InputPin" />
+              <Pin Id="FtfXjJX08aXO0vZJv8uvQI" Name="Net" Kind="InputPin" />
+              <Pin Id="HVRC2PT3HZLOFKVr1emnIg" Name="Subnet" Kind="InputPin" />
+              <Pin Id="J8fba20g1H7PT3cEq9cPfE" Name="Universe" Kind="InputPin" />
+              <Pin Id="HtmVO8kOvd4QJUpsNouxJe" Name="Packet" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="TVF5YausASwNdO3IB6ngBg" Bounds="27,201" />
+            <ControlPoint Id="D0M5JJzSKYXP85aW6zY3sf" Bounds="79,201" />
+            <ControlPoint Id="ORwKAYmkJL0MlCGlmacGyU" Bounds="121,201" />
+            <ControlPoint Id="Szu9j1nYL88MD0IiIWQaIc" Bounds="177,201" />
+            <ControlPoint Id="Nn6QCp1KQn2Ocfvh7bp7ff" Bounds="29,327" />
+            <Link Id="FSmz19uJd6LQG6Wq2mIM4s" Ids="PoEK2rk4i6TLTkTbaJoFt5,Nn6QCp1KQn2Ocfvh7bp7ff" />
+            <Link Id="FO1uGuoRmlEOGIPDMj4FwZ" Ids="TVF5YausASwNdO3IB6ngBg,GLgNVh6359UPP0mwhAJmWX" />
+            <Link Id="RzSz0hKzkNmNzljeVi8vJY" Ids="ORwKAYmkJL0MlCGlmacGyU,HVRC2PT3HZLOFKVr1emnIg" />
+            <Link Id="KNv8k0hNTcSNC8q58oaScK" Ids="Szu9j1nYL88MD0IiIWQaIc,J8fba20g1H7PT3cEq9cPfE" />
+            <Link Id="GdFY0c1kRWAQTGHXxQFtr5" Ids="D0M5JJzSKYXP85aW6zY3sf,FtfXjJX08aXO0vZJv8uvQI" />
+            <Link Id="B4CvnldtvOlMIQe695RpVn" Ids="NbyuynOoGgwOtH3kXUuwOZ,TVF5YausASwNdO3IB6ngBg" IsHidden="true" />
+            <Link Id="Q9bjC4zJWlXLkU7Z1dqdZL" Ids="Lsmd60GlmIDOedJFeGikM0,D0M5JJzSKYXP85aW6zY3sf" IsHidden="true" />
+            <Link Id="LRYtbcn1PjPP4LTSUo7Z8X" Ids="At04fPIyukGPDX1mszzZw3,ORwKAYmkJL0MlCGlmacGyU" IsHidden="true" />
+            <Link Id="DA3E5MojojNLzHh6MnIUbu" Ids="H91e8VlfbhsNKPYuNpIizO,Szu9j1nYL88MD0IiIWQaIc" IsHidden="true" />
+            <Link Id="FTuCshX0IzfPzl8DheiLgn" Ids="Nn6QCp1KQn2Ocfvh7bp7ff,FDpV6LTCiIIP4eG3H1ffHW" IsHidden="true" />
+            <Link Id="BnWP7ng1DjQOo21crLIjak" Ids="HtmVO8kOvd4QJUpsNouxJe,Khhg3Hu9v4gL4c6b2mMczt" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ArtDMXDecode (Internal) ************************
+
+-->
+        <Node Name="ArtDMXDecode (Internal)" Bounds="304,187,217,166" Id="VdC1xnUXsp8OR1S1TQF8E3">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="APW2Vm6DYooPnQg0SwkaAA">
+            <Pin Id="I5r4QOAine8MCviG7G12gD" Name="Value" Kind="InputPin" Bounds="-18,0" />
+            <Pin Id="UeqlVn8SFAjQYACqbTzq54" Name=" Net" Kind="InputPin" Bounds="-18,0" />
+            <Pin Id="DJvCAWqY426P7SFMFOuDlm" Name="Subnet" Kind="InputPin" Bounds="-18,0" />
+            <Pin Id="EkfpSfecChpL1NQnEkPXoz" Name="Universe" Kind="InputPin" Bounds="-18,0" />
+            <Pin Id="C1gDLhZETJ4NLgVfAkr6Yo" Name="Result" Kind="OutputPin" Bounds="-18,0" />
+            <Node Bounds="323,254,96,13" Id="QMaaaqH7jUGOPjqIwBonvY">
+              <p:NodeReference LastCategoryFullName="IO.ArtNet" LastSymbolSource="VL.Artnet.vl" LastPackageId="VL.CoreLib">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="IO" />
+                <CategoryReference Kind="Category" Name="ArtNet" />
+                <Choice Kind="OperationCallFlag" Name="ArtDMXDecode" />
+              </p:NodeReference>
+              <Pin Id="BigvG8dyM7GLedlFrvsMmm" Name="Packet" Kind="InputPin" />
+              <Pin Id="KOQG8OtLT6zOKvaQQtTCtu" Name=" Net" Kind="InputPin" />
+              <Pin Id="MH5rQi3bjs9MYXsvXPIujd" Name="Subnet" Kind="InputPin" />
+              <Pin Id="MxFBvDfjOSBLOxbQtLyAww" Name="Universe" Kind="InputPin" />
+              <Pin Id="G1wkDOc03RuNlhCcSo1dkK" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="323,288,52,22" Id="VzbBkhACTCxMjKizIYnxKv">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Core.dll" LastPackageId="VL.Core">
+                <Choice Kind="OperationNode" Name="ToSpread" />
+                <CategoryReference Kind="Category" Name="Sequence" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="GziR1K1pCwYPCy40rJUONM" Name="Input" Kind="InputPin" />
+              <Pin Id="F8Whg8LXZYbO85j2sWYeq7" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="NKcCfazP0d6NoUflHIOYup" Bounds="318,203" />
+            <ControlPoint Id="H0bPmbSLWGaPR2anLDaYMF" Bounds="368,203" />
+            <ControlPoint Id="Ql0llbqMQvLN1urknUFuL7" Bounds="410,203" />
+            <ControlPoint Id="EqwZvu18S6FMIXldm7ZPFa" Bounds="467,203" />
+            <ControlPoint Id="A66QKwiYqkFPEakho3JEVe" Bounds="325,335" />
+            <Link Id="CQZqzoW84lsO37mQnrYabH" Ids="NKcCfazP0d6NoUflHIOYup,BigvG8dyM7GLedlFrvsMmm" />
+            <Link Id="A2NyTX0VohvLuzXEPHqCYt" Ids="F8Whg8LXZYbO85j2sWYeq7,A66QKwiYqkFPEakho3JEVe" />
+            <Link Id="SQkHDnmS6mBMNMl4Pk5RqV" Ids="G1wkDOc03RuNlhCcSo1dkK,GziR1K1pCwYPCy40rJUONM" />
+            <Link Id="S2lWtZVNgC9NkbykYEdHgD" Ids="Ql0llbqMQvLN1urknUFuL7,MH5rQi3bjs9MYXsvXPIujd" />
+            <Link Id="JCLvzxPBxjCQBpnLZeRlvj" Ids="EqwZvu18S6FMIXldm7ZPFa,MxFBvDfjOSBLOxbQtLyAww" />
+            <Link Id="EpLt8YSQsOYPzKsZn7MXzd" Ids="H0bPmbSLWGaPR2anLDaYMF,KOQG8OtLT6zOKvaQQtTCtu" />
+            <Link Id="APehXJiGZX7MllR5zEyCr9" Ids="I5r4QOAine8MCviG7G12gD,NKcCfazP0d6NoUflHIOYup" IsHidden="true" />
+            <Link Id="GU7tkDiSUmbO05lbw5maFs" Ids="UeqlVn8SFAjQYACqbTzq54,H0bPmbSLWGaPR2anLDaYMF" IsHidden="true" />
+            <Link Id="Dt7sYIVVJrPMfUhwP5y9zS" Ids="DJvCAWqY426P7SFMFOuDlm,Ql0llbqMQvLN1urknUFuL7" IsHidden="true" />
+            <Link Id="SzY9gCUaNemQHlyG4y9RtQ" Ids="EkfpSfecChpL1NQnEkPXoz,EqwZvu18S6FMIXldm7ZPFa" IsHidden="true" />
+            <Link Id="IfJTm4UDQ1PP7bVWbFO6bd" Ids="A66QKwiYqkFPEakho3JEVe,C1gDLhZETJ4NLgVfAkr6Yo" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+  </Patch>
+</Document>
