@@ -97,7 +97,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8850" top="5490" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -106,8 +106,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Enabled">
@@ -133,7 +131,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8145" top="4455" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="COM3">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="37" srcpinname="Output Enum" dstnodeid="21" dstpinname="Port Name">
