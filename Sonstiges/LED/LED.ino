@@ -10,7 +10,7 @@
 #include <SPI.h>         // COMMENT OUT THIS LINE FOR GEMMA OR TRINKET
 //#include <avr/power.h> // ENABLE THIS LINE FOR GEMMA OR TRINKET
 
-#define NUMPIXELS 30 // 180 // Number of LEDs in strip
+#define NUMPIXELS 14 // 180 // Number of LEDs in strip
 
 // Here's how to control the LEDs from any two pins:
 #define DATAPIN    4
@@ -27,11 +27,10 @@ Adafruit_DotStar strip = Adafruit_DotStar(
 //Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS, DOTSTAR_BRG);
 #include <Arduino.h>
 #include <Wire.h>         // this #include still required because the RTClib depends on it
-#include "RTClib.h"
 
 #if defined(ARDUINO_ARCH_SAMD)
 // for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
-   #define Serial SerialUSB
+  // #define Serial SerialUSB
 #endif
 
 
@@ -43,7 +42,7 @@ void setup() {
 
   strip.begin(); // Initialize pins for output
   strip.show();  // Turn all LEDs off ASAP
-    Serial.begin(57600);
+    Serial.begin(9600);
    
 }
 
@@ -52,13 +51,44 @@ void setup() {
 
 int      head  = 0, tail = -10; // Index of first 'on' and 'off' pixels
 uint32_t    color = 0xF2522A;   // 'On' color (starts red)
+uint8_t  animation    = 0;
+uint32_t    gelb = 0x0000FF;
+uint32_t    orange = 0xFF8800;
+uint32_t    weiss = 0xFFFFFF;
 
+/*Lampenzustände
+0=Basiswert -->Gelb
+1=Tischweisung --> Weiß
+2=Kellner rufen --> Gelb unten Orange oben
+*/
 void loop() {
 
-  strip.setPixelColor(head, color); // 'On' pixel at head
+  while (Serial.available())
+  {
+    animation =Serial.read();
+  }
+
+  //Hier LED Farben programmieren
+  if(animation == 0){
+    for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,gelb);
+    }
+  }else if(animation == 1){
+     for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,orange);
+    }
+  }else if(animation ==2){
+     for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,weiss);
+    }
+  }
+  strip.show();
+  //delay(500);
+
+ /* strip.setPixelColor(head, color); // 'On' pixel at head
   strip.setPixelColor(tail, 0xF2A82A);     // 'Off' pixel at tail
   strip.show();                     // Refresh strip
-  delay(15);                        // Pause 20 milliseconds (~50 FPS)
+  delay(150);                        // Pause 20 milliseconds (~50 FPS)
 
   if(++head >= NUMPIXELS) {         // Increment head index.  Off end of strip?
     head = 0;                       //  Yes, reset head index to start
@@ -66,5 +96,5 @@ void loop() {
          color = 0xFF4500;           //   Yes, reset to red
   }
   if(++tail >= NUMPIXELS) tail = 0; // Increment, reset tail index
-  
+  */
 }
