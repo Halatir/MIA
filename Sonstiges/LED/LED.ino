@@ -1,100 +1,133 @@
-// Simple strand test for Adafruit Dot Star RGB LED strip.
-// This is a basic diagnostic tool, NOT a graphics demo...helps confirm
-// correct wiring and tests each pixel's ability to display red, green
-// and blue and to forward data down the line.  By limiting the number
-// and color of LEDs, it's reasonably safe to power a couple meters off
-// the Arduino's 5V pin.  DON'T try that with other code!
-
 #include <Adafruit_DotStar.h>
-// Because conditional #includes don't work w/Arduino sketches...
-#include <SPI.h>         // COMMENT OUT THIS LINE FOR GEMMA OR TRINKET
-//#include <avr/power.h> // ENABLE THIS LINE FOR GEMMA OR TRINKET
+#include <SPI.h>       
+#define NUMPIXELS 52 // Number of LEDs in strip
+#define NUMSTRIPES 4
+#define STRIPELENGTH 13
 
-#define NUMPIXELS 14 // 180 // Number of LEDs in strip
-
-// Here's how to control the LEDs from any two pins:
 #define DATAPIN    4
 #define CLOCKPIN   5
+#define DATA2    6
+#define CLOCK2   7
 Adafruit_DotStar strip = Adafruit_DotStar(
   NUMPIXELS, DATAPIN, CLOCKPIN, DOTSTAR_BRG);
-// The last parameter is optional -- this is the color data order of the
-// DotStar strip, which has changed over time in different production runs.
-// Your code just uses R,G,B colors, the library then reassigns as needed.
-// Default is DOTSTAR_BRG, so change this if you have an earlier strip.
+  Adafruit_DotStar strip2 = Adafruit_DotStar(
+  NUMPIXELS, DATA2, CLOCK2, DOTSTAR_BRG);
 
-// Hardware SPI is a little faster, but must be wired to specific pins
-// (Arduino Uno = pin 11 for data, 13 for clock, other boards are different).
-//Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS, DOTSTAR_BRG);
-#include <Arduino.h>
-#include <Wire.h>         // this #include still required because the RTClib depends on it
 
-#if defined(ARDUINO_ARCH_SAMD)
-// for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
-  // #define Serial SerialUSB
-#endif
+uint8_t  animation    = 1;
+uint32_t    gelb = 0xFFFF00;
+uint32_t    orange = 0x55FF00;
+uint32_t    weiss = 0xFFFFFF;
+uint32_t    rot = 0x00FF00;
+int anders=STRIPELENGTH;
 
 
 void setup() {
-
-#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000L)
-  clock_prescale_set(clock_div_1); // Enable 16 MHz on Trinket
-#endif
-
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  pinMode(DATAPIN, OUTPUT);
+  pinMode(CLOCKPIN, OUTPUT);
+    pinMode(DATA2, OUTPUT);
+  pinMode(CLOCK2, OUTPUT);
   strip.begin(); // Initialize pins for output
+  strip2.begin();
   strip.show();  // Turn all LEDs off ASAP
-    Serial.begin(9600);
-   
+  strip2.show();
 }
 
 // Runs 10 LEDs at a time along strip, cycling through red, green and blue.
 // This requires about 200 mA for all the 'on' pixels + 1 mA per 'off' pixel.
 
 int      head  = 0, tail = -10; // Index of first 'on' and 'off' pixels
-uint32_t    color = 0xF2522A;   // 'On' color (starts red)
-uint8_t  animation    = 0;
-uint32_t    gelb = 0x0000FF;
-uint32_t    orange = 0xFF8800;
-uint32_t    weiss = 0xFFFFFF;
+uint32_t color = 0xffffff   ;   // 'On' color (starts red)
 
-/*Lampenzustände
-0=Basiswert -->Gelb
-1=Tischweisung --> Weiß
-2=Kellner rufen --> Gelb unten Orange oben
-*/
 void loop() {
+while (Serial.available())
+  {
+    animation =Serial.read();
+  }
 
-  while (Serial.available())
+if(animation == 0){
+    for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,gelb);
+         strip2.setPixelColor(i,gelb);
+    }
+    }else if(animation ==1){
+    for(int j=0;j<NUMSTRIPES;j++){
+      for(int i=0;i<STRIPELENGTH;i++){
+        if(i!=anders){
+          strip.setPixelColor(i+j*STRIPELENGTH,gelb);
+          strip2.setPixelColor(i+j*STRIPELENGTH,gelb);
+        }
+      }
+      strip.setPixelColor(anders+j*STRIPELENGTH,rot);
+      strip2.setPixelColor(anders+j*STRIPELENGTH,rot);
+    }
+     anders--; 
+     delay(5);
+     if(anders==0){
+      anders=STRIPELENGTH;
+    //  animation=1;
+     }
+    }else if(animation==2){
+       for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,weiss);
+         strip2.setPixelColor(i,weiss);
+         }
+    }
+    
+  
+/*for(int i=0;i<104;i++){
+  strip.setPixelColor(i,color);
+  strip2.setPixelColor(i,color);
+ }*/
+
+strip.show();
+strip2.show();
+delay(100);
+}
+
+ /* while (Serial.available())
   {
     animation =Serial.read();
   }
 
   //Hier LED Farben programmieren
-  if(animation == 0){
-    for(int i=0;i<NUMPIXELS;i++){
-         strip.setPixelColor(i,gelb);
+
+  for(int i=0; i<NUMSTRIPES;i++){
+      for(int j=0;j<STRIPELENGTH/2;j++){
+        strip.setPixelColor(j+i*STRIPELENGTH,gelb);
+        strip2.setPixelColor(j+i*STRIPELENGTH,gelb);
+      }
+       for(int j=STRIPELENGTH/2;j<STRIPELENGTH;j++){
+        strip.setPixelColor(j+i*STRIPELENGTH,orange);
+        strip2.setPixelColor(j+i*STRIPELENGTH,orange);
+      }
     }
-  }else if(animation == 1){
-     for(int i=0;i<NUMPIXELS;i++){
-         strip.setPixelColor(i,orange);
-    }
+    
   }else if(animation ==2){
      for(int i=0;i<NUMPIXELS;i++){
          strip.setPixelColor(i,weiss);
+         strip2.setPixelColor(i,weiss);
     }
+  }else if(animation ==3){
+    for(int j=0;j<NUMSTRIPES;j++){
+      for(int i=0;i<STRIPELENGTH;i++){
+        if(i!=anders){
+          strip.setPixelColor(i+j*STRIPELENGTH,gelb);
+          strip2.setPixelColor(i+j*STRIPELENGTH,gelb);
+        }
+      }
+      strip.setPixelColor(anders+j*STRIPELENGTH,orange);
+      strip2.setPixelColor(anders+j*STRIPELENGTH,orange);
+    }
+     anders++; 
+     delay(100);
+     if(anders==STRIPELENGTH){
+      anders=0;
+    //  animation=1;
+     }
   }
   strip.show();
   //delay(500);
-
- /* strip.setPixelColor(head, color); // 'On' pixel at head
-  strip.setPixelColor(tail, 0xF2A82A);     // 'Off' pixel at tail
-  strip.show();                     // Refresh strip
-  delay(150);                        // Pause 20 milliseconds (~50 FPS)
-
-  if(++head >= NUMPIXELS) {         // Increment head index.  Off end of strip?
-    head = 0;                       //  Yes, reset head index to start
-          //  Next color (R->G->B) ... past blue now?
-         color = 0xFF4500;           //   Yes, reset to red
-  }
-  if(++tail >= NUMPIXELS) tail = 0; // Increment, reset tail index
-  */
-}
+*/
