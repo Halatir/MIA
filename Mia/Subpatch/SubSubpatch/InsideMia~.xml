@@ -1,0 +1,165 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" systemname="InsideMia" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" scrollx="0" scrolly="360">
+   <BOUNDS type="Window" left="4125" top="3600" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1635" top="3435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1755" top="2790" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateZ" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Pitch" slicecount="1" values="75">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.3">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.3">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3105" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Blue" slicecount="1" values="0.3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="2" dstpinname="Color">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="3">
+   <BOUNDS type="Box" left="1320" top="1455" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1320" top="1455" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="TischplatteTransform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="1" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="990" top="4455" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="990" top="4455" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DebugMia">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="ZHittest" filename="SubSubpatch\ZHittest.v4p" nodename="SubSubpatch\ZHittest.v4p" componentmode="InAWindow" id="9">
+   <BOUNDS type="Node" left="4800" top="3750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ObjektX" visible="1">
+   </PIN>
+   <PIN pinname="ObjektZ" visible="1">
+   </PIN>
+   <PIN pinname="HandX" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="HandZ" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Hovered" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="-2910" top="9855" width="9000" height="6240">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ApplyTransform (Transform)" nodename="ApplyTransform (Transform)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4365" top="3090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="X Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Y Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Z Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="X Transformed" dstnodeid="9" dstpinname="ObjektX">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Box" left="4485" top="4740" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4485" top="4740" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="InsideMia">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Hovered" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="ApplyTransform (Transform)" nodename="ApplyTransform (Transform)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="5775" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="X Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Y Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Z Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="X Transformed" dstnodeid="9" dstpinname="HandX">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Z Transformed" dstnodeid="9" dstpinname="HandZ">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Z Transformed" dstnodeid="9" dstpinname="ObjektZ">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="5040" top="4815" width="2325" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5040" top="4815" width="2325" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|The Tested Object is inside Mia|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="8" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="10">
+   <BOUNDS type="Box" left="5385" top="1290" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5385" top="1290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ObjectTransform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="6" dstpinname="Transform">
+   </LINK>
+   </PATCH>
