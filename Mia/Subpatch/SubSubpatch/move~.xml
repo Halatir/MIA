@@ -1,0 +1,61 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\move.v4p" scrollx="0" scrolly="30" systemname="move" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\move.v4p">
+   <BOUNDS type="Window" left="3870" top="1860" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="HitQuad" filename="%VVVV%\girlpower\Transformations\Drag\Subpatches\HitQuad.v4p" nodename="Subpatches\HitQuad.v4p" componentmode="Hidden" id="3" stayontop="0">
+   <BOUNDS type="Node" left="4710" top="2505" width="855" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3160" top="715" width="3100" height="3580">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8700" top="3420" width="5190" height="4605">
+   </BOUNDS>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   <PIN pinname="TranslateXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1" slicecount="2" values="0.05,0.05">
+   </PIN>
+   <PIN pinname="Mouse PositionXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="ApplyTransform (Transform)" nodename="ApplyTransform (Transform)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3495" top="1185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Z Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3825" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="X Transformed" dstnodeid="1" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Z Transformed" dstnodeid="1" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="XY" dstnodeid="3" dstpinname="TranslateXY">
+   </LINK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="5130" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="XY" dstnodeid="3" dstpinname="Mouse PositionXY">
+   </LINK>
+   </PATCH>
