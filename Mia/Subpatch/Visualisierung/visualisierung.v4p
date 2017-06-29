@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.5.dtd" >
-   <PATCH nodename="C:\Users\Olga\Documents\Github\Mia\Subpatch\Visualisierung\visualisierung.v4p" systemname="visualisierung" filename="C:\Users\Olga\Documents\Github\Mia\Subpatch\Visualisierung\visualisierung.v4p" scrollx="20" scrolly="-360">
-   <BOUNDS type="Window" left="9280" top="1060" width="18300" height="15230">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\Visualisierung\visualisierung.v4p" systemname="visualisierung" filename="C:\Users\Olga\Documents\Github\Mia\Subpatch\Visualisierung\visualisierung.v4p" scrollx="15" scrolly="3240">
+   <BOUNDS type="Window" left="3150" top="915" width="18300" height="11700">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="0">
    <BOUNDS type="Node" left="6010" top="12520" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="6010" top="12520" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="1060" top="1650" width="15100" height="12770">
+   <BOUNDS type="Window" left="-5685" top="525" width="15090" height="11700">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -181,7 +181,7 @@
    </PIN>
    <PIN pinname="Height" visible="1" slicecount="3" values="0.872101434454674,0.822461400402885,1.09499916340892">
    </PIN>
-   <PIN pinname="Factor" slicecount="1" values="1.01" visible="1">
+   <PIN pinname="Factor" slicecount="1" visible="1" values="1.01">
    </PIN>
    <PIN pinname="Phase" visible="1" slicecount="9" values="0.835018089690468,1.00512800321437,1.06216794760412,0.94878165695832,1.00512800321437,1.06216794760412,1.11489990585417,1.00512800321437,1.06216794760412">
    </PIN>
@@ -253,7 +253,7 @@
    <NODE componentmode="Hidden" id="43" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="7520" top="11310" type="Node" width="4410">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -400,34 +400,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="effects\Cosine-Spline PhongDirectional GPU.fx" id="28" nodename="Cosine-Spline PhongDirectional GPU (EX9.Effect)" systemname="Cosine-Spline PhongDirectional GPU (EX9.Effect)">
-   <BOUNDS height="100" left="7520" top="10980" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Size" visible="1">
-   </PIN>
-   <PIN pinname="Position Texture" visible="1">
-   </PIN>
-   <PIN pinname="Mesh" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="pitch" slicecount="1" values="0.99">
-   </PIN>
-   <PIN pinname="Ambient Color" visible="1" slicecount="1" values="|0.99000,0.54000,0.09000,1.00000|">
-   </PIN>
-   <PIN pinname="Diffuse Color" visible="1" slicecount="1" values="|6.23760,3.68699,1.84000,1.00000|">
-   </PIN>
-   <PIN pinname="Specular Color" visible="1" slicecount="1" values="|6.23760,3.68699,1.84000,1.00000|">
-   </PIN>
-   <PIN pinname="alpha" slicecount="1" visible="1" values="0.42">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="28" dstpinname="Size" srcnodeid="40" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="28" dstpinname="Position Texture" srcnodeid="34" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="43" dstpinname="Layer 1" srcnodeid="28" srcpinname="Layer">
-   </LINK>
    <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 5">
    </LINK>
    <NODE componentmode="Hidden" filename="..\..\Nodes\Effects\SplinesGPU\subpatches\Spline (EX9 Mesh).v4p" id="42" nodename="Spline (EX9 Mesh)" systemname="Spline (EX9 Mesh)">
@@ -445,8 +417,6 @@
    <LINK dstnodeid="42" dstpinname="Resolution X" srcnodeid="37" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="42" dstpinname="Spline Count" srcnodeid="38" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="28" dstpinname="Mesh" srcnodeid="42" srcpinname="Mesh">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output X" dstnodeid="34" dstpinname="Red">
    </LINK>
@@ -723,7 +693,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1400" top="110" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Internal Microphone (Cirrus Logic CS4208 (AB 128))|">
+   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (Realtek High Definition Audio)|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -941,7 +911,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4800" top="350" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Internal Microphone (Cirrus Logic CS4208 (AB 128))|">
+   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (Realtek High Definition Audio)|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -1080,12 +1050,6 @@
    <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Ambient Color">
-   </LINK>
-   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Diffuse Color">
-   </LINK>
-   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Specular Color">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="122">
    <BOUNDS type="Box" left="8660" top="10180" width="800" height="240">
    </BOUNDS>
@@ -1098,8 +1062,6 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="122" srcpinname="Y Output Value" dstnodeid="28" dstpinname="alpha">
-   </LINK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="132">
    <BOUNDS type="Node" left="1640" top="10040" width="100" height="100">
    </BOUNDS>
@@ -1549,5 +1511,43 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Factor">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\..\Nodes\Effects\SplinesGPU\effects\Cosine-Spline PhongDirectional GPU.fx" id="28" nodename="Cosine-Spline PhongDirectional GPU (EX9.Effect)" systemname="Cosine-Spline PhongDirectional GPU (EX9.Effect)">
+   <BOUNDS height="100" left="7520" top="10980" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Size" visible="1">
+   </PIN>
+   <PIN pinname="Position Texture" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="pitch" slicecount="1" values="0.99">
+   </PIN>
+   <PIN pinname="Ambient Color" visible="1" slicecount="1" values="|0.99000,0.54000,0.09000,1.00000|">
+   </PIN>
+   <PIN pinname="Diffuse Color" visible="1" slicecount="1" values="|6.23760,3.68699,1.84000,1.00000|">
+   </PIN>
+   <PIN pinname="Specular Color" visible="1" slicecount="1" values="|6.23760,3.68699,1.84000,1.00000|">
+   </PIN>
+   <PIN pinname="alpha" slicecount="1" visible="1" values="0.42">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="28" dstpinname="Size" srcnodeid="40" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="28" dstpinname="Position Texture" srcnodeid="34" srcpinname="Texture Out">
+   </LINK>
+   <LINK dstnodeid="43" dstpinname="Layer 1" srcnodeid="28" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="28" dstpinname="Mesh" srcnodeid="42" srcpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Ambient Color">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Diffuse Color">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="28" dstpinname="Specular Color">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Y Output Value" dstnodeid="28" dstpinname="alpha">
    </LINK>
    </PATCH>
