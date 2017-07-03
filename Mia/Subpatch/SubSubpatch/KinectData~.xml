@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
-   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\KinectData.v4p" systemname="Kinect" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\Kinect.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="5835" top="2790" width="8070" height="7395">
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\KinectData.v4p" systemname="Kinect" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\Kinect.v4p" scrollx="0" scrolly="360">
+   <BOUNDS type="Window" left="10695" top="780" width="9795" height="7395">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -39,9 +39,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="HandLinks">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="26" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27">
    <BOUNDS type="Box" left="6615" top="6120" width="795" height="240">
    </BOUNDS>
@@ -53,9 +53,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="HandRechts">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="27" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Kinect2 (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\kinect2\VVVV.DX11.Nodes.Kinect2.dll" nodename="Kinect2 (Devices Microsoft)" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="870" top="1335" width="100" height="100">
    </BOUNDS>
@@ -71,9 +71,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="51" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1920" top="225" width="480" height="480">
+   <BOUNDS type="Box" left="1605" top="300" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1920" top="225" width="0" height="0">
+   <BOUNDS type="Node" left="1605" top="300" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -257,5 +257,57 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Layer Out" dstnodeid="53" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="initnew" filename="SubSubpatch\initnew.v4p" componentmode="Hidden" id="54" nodename="SubSubpatch\initnew.v4p">
+   <BOUNDS type="Node" left="6840" top="3525" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6840" top="3525" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4020" top="3975" width="12570" height="10230">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Ground" visible="1" slicecount="1" values="0.017846193164587">
+   </PIN>
+   <PIN pinname="Kalibrierungshand" visible="1">
+   </PIN>
+   <PIN pinname="HandLinksIn" visible="1">
+   </PIN>
+   <PIN pinname="HandRechtsOut" visible="1">
+   </PIN>
+   <PIN pinname="HandLinksOut" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="54" dstpinname="KalibrierungshandRechts">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="54" dstpinname="HandLinksIn">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="HandRechtsOut" dstnodeid="27" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="HandLinksOut" dstnodeid="26" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55">
+   <BOUNDS type="Box" left="7575" top="6120" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7575" top="6120" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Ground">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Ground" dstnodeid="55" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="56">
+   <BOUNDS type="Box" left="8475" top="6120" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8475" top="6120" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="InitLayer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Layer" dstnodeid="56" dstpinname="Input Node">
    </LINK>
    </PATCH>
