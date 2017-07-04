@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
-   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\Bewegung.v4p" scrollx="0" scrolly="-360" systemname="move" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\move.v4p">
-   <BOUNDS type="Window" left="10800" top="3690" width="9000" height="8010">
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\Bewegung.v4p" scrollx="360" scrolly="-360" systemname="move" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\move.v4p">
+   <BOUNDS type="Window" left="1005" top="570" width="9000" height="8010">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -21,7 +21,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="5130" top="1740" width="100" height="100">
+   <BOUNDS type="Node" left="5685" top="1845" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
@@ -30,8 +30,6 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="XY" dstnodeid="3" dstpinname="Mouse PositionXY">
-   </LINK>
    <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="5475" top="1365" width="100" height="100">
    </BOUNDS>
@@ -179,7 +177,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6885" top="1665" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -263,7 +261,7 @@
    </PIN>
    <PIN pinname="Is Hit" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="PositionXY" visible="1" slicecount="2" values="0,0">
+   <PIN pinname="PositionXY" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Drag" visible="1" slicecount="1" values="0">
    </PIN>
@@ -274,11 +272,7 @@
    </NODE>
    <LINK srcnodeid="21" srcpinname="OffsetXY" dstnodeid="22" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="XY" dstnodeid="21" dstpinname="PositionXY">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Object Hit" dstnodeid="21" dstpinname="Is Hit">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="21" dstpinname="Drag">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
    <BOUNDS type="Box" left="4080" top="1605" width="795" height="480">
@@ -323,9 +317,9 @@
    <LINK srcnodeid="3" srcpinname="Object Hit" dstnodeid="41" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42">
-   <BOUNDS type="Box" left="6480" top="4290" width="480" height="480">
+   <BOUNDS type="Box" left="6525" top="3390" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="6480" top="4290" width="0" height="0">
+   <BOUNDS type="Node" left="6525" top="3390" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -334,6 +328,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Output" dstnodeid="42" dstpinname="Y Input Value">
@@ -349,5 +345,65 @@
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="6" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="5670" top="2310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="XY" dstnodeid="48" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="6930" top="330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="PositionXY" dstnodeid="48" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="6195" top="5205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (4d Split)" nodename="Vector (4d Split)" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="6465" top="4155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="53" dstpinname="XYZW">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="X" dstnodeid="51" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Y" dstnodeid="51" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Left Button" dstnodeid="51" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="PositionXY" dstnodeid="21" dstpinname="PositionXY">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="21" dstpinname="Drag">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="3" dstpinname="Mouse PositionXY">
    </LINK>
    </PATCH>

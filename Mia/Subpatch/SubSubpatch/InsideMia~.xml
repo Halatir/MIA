@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
-   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" systemname="InsideMia" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" scrollx="30" scrolly="1080">
-   <BOUNDS type="Window" left="7785" top="2925" width="9000" height="6000">
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" systemname="InsideMia" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" scrollx="30" scrolly="-360">
+   <BOUNDS type="Window" left="11865" top="0" width="9000" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -36,44 +36,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="HitQuad" filename="%VVVV%\girlpower\Transformations\Drag\Subpatches\HitQuad.v4p" nodename="Subpatches\HitQuad.v4p" componentmode="Hidden" id="50" stayontop="0">
-   <BOUNDS type="Node" left="3990" top="2910" width="855" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2440" top="1120" width="3100" height="3580">
-   </BOUNDS>
-   <BOUNDS type="Window" left="8700" top="3420" width="5190" height="4605">
-   </BOUNDS>
-   <PIN pinname="Object Hit" visible="1">
-   </PIN>
-   <PIN pinname="TranslateXY" visible="1" slicecount="2" values="-0.249999985098839,1.14999985694885">
-   </PIN>
-   <PIN pinname="ScaleXY" visible="1" slicecount="2" values="0.29,0.29">
-   </PIN>
-   <PIN pinname="Mouse PositionXY" visible="1" slicecount="2" values="0,0">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52">
-   <BOUNDS type="Box" left="2280" top="390" width="1200" height="780">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2280" top="390" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.249999985098839,1.14999985694885">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="UIObjects">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   </NODE>
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="57">
    <BOUNDS type="Node" left="5415" top="2040" width="100" height="100">
    </BOUNDS>
@@ -94,8 +56,6 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="XY" dstnodeid="50" dstpinname="Mouse PositionXY">
-   </LINK>
    <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="63">
    <BOUNDS type="Node" left="5565" top="1440" width="100" height="100">
    </BOUNDS>
@@ -111,9 +71,9 @@
    <LINK srcnodeid="63" srcpinname="Transform Out" dstnodeid="57" dstpinname="Transform">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64">
-   <BOUNDS type="Box" left="5685" top="480" width="795" height="720">
+   <BOUNDS type="Box" left="5670" top="180" width="795" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="5685" top="480" width="0" height="0">
+   <BOUNDS type="Node" left="5670" top="180" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
    </PIN>
@@ -151,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6765" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.56,0.54,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.38,0.39,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -192,8 +152,6 @@
    </LINK>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="67" dstpinname="XYZ">
    </LINK>
-   <LINK srcnodeid="68" srcpinname="XY" dstnodeid="50" dstpinname="ScaleXY">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="69">
    <BOUNDS type="Box" left="5730" top="4365" width="795" height="240">
    </BOUNDS>
@@ -221,15 +179,13 @@
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="72">
    <BOUNDS type="Node" left="3360" top="3555" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="50" srcpinname="Object Hit" dstnodeid="72" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="72" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="73">
@@ -274,8 +230,44 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 1">
-   </LINK>
+   <NODE id="50" componentmode="Hidden" systemname="HitQuad" filename="%VVVV%\girlpower\Transformations\Drag\Subpatches\HitQuad.v4p" nodename="Subpatches\HitQuad.v4p" stayontop="0">
+   <BOUNDS type="Window" left="1425" top="5100" width="5190" height="4605">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3990" top="2910" width="855" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2440" top="1120" width="3100" height="3580">
+   </BOUNDS>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   <PIN pinname="TranslateXY" visible="1" slicecount="2" values="-0.249999985098839,1.14999985694885">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1" slicecount="2" values="0.29,0.29">
+   </PIN>
+   <PIN pinname="Mouse PositionXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="75" srcpinname="Output 1" dstnodeid="50" dstpinname="TranslateXY">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Object Hit" dstnodeid="72" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="XY" dstnodeid="50" dstpinname="Mouse PositionXY">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="XY" dstnodeid="50" dstpinname="ScaleXY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78">
+   <BOUNDS type="Box" left="2820" top="930" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2820" top="930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="UIElements">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 1">
    </LINK>
    </PATCH>

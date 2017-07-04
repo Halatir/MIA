@@ -19,6 +19,7 @@ uint32_t    gelb = 0xFFFF00;
 uint32_t    orange = 0x55FF00;
 uint32_t    weiss = 0xFFFFFF;
 uint32_t    rot = 0x00FF00;
+uint32_t    aus = 0x000000;
 int anders=STRIPELENGTH;
 
 
@@ -48,11 +49,12 @@ while (Serial.available())
   }
 
 if(animation == 0){
+    anders=STRIPELENGTH;
     for(int i=0;i<NUMPIXELS;i++){
          strip.setPixelColor(i,gelb);
          strip2.setPixelColor(i,gelb);
     }
-    }else if(animation ==1){
+    }else if(animation ==3){
     for(int j=0;j<NUMSTRIPES;j++){
       for(int i=0;i<STRIPELENGTH;i++){
         if(i!=anders){
@@ -65,69 +67,38 @@ if(animation == 0){
     }
      anders--; 
      delay(5);
-     if(anders==0){
-      anders=STRIPELENGTH;
-    //  animation=1;
+     if(anders==-2){
+      anders=-1;
      }
     }else if(animation==2){
+       anders=STRIPELENGTH;
        for(int i=0;i<NUMPIXELS;i++){
          strip.setPixelColor(i,weiss);
          strip2.setPixelColor(i,weiss);
          }
+    }else if(animation==1){
+      for(int i=0; i<NUMSTRIPES;i++){
+        for(int j=0;j<STRIPELENGTH/2;j++){
+          strip.setPixelColor(j+i*STRIPELENGTH,gelb);
+          strip2.setPixelColor(j+i*STRIPELENGTH,gelb);
+        }
+         for(int j=STRIPELENGTH/2;j<STRIPELENGTH;j++){
+          strip.setPixelColor(j+i*STRIPELENGTH,orange);
+          strip2.setPixelColor(j+i*STRIPELENGTH,orange);
+        }
+     }
+    }else if(animation==4){
+       anders=STRIPELENGTH;
+       for(int i=0;i<NUMPIXELS;i++){
+         strip.setPixelColor(i,aus);
+         strip2.setPixelColor(i,aus);
+         }
     }
     
   
-/*for(int i=0;i<104;i++){
-  strip.setPixelColor(i,color);
-  strip2.setPixelColor(i,color);
- }*/
 
 strip.show();
 strip2.show();
 delay(100);
 }
 
- /* while (Serial.available())
-  {
-    animation =Serial.read();
-  }
-
-  //Hier LED Farben programmieren
-
-  for(int i=0; i<NUMSTRIPES;i++){
-      for(int j=0;j<STRIPELENGTH/2;j++){
-        strip.setPixelColor(j+i*STRIPELENGTH,gelb);
-        strip2.setPixelColor(j+i*STRIPELENGTH,gelb);
-      }
-       for(int j=STRIPELENGTH/2;j<STRIPELENGTH;j++){
-        strip.setPixelColor(j+i*STRIPELENGTH,orange);
-        strip2.setPixelColor(j+i*STRIPELENGTH,orange);
-      }
-    }
-    
-  }else if(animation ==2){
-     for(int i=0;i<NUMPIXELS;i++){
-         strip.setPixelColor(i,weiss);
-         strip2.setPixelColor(i,weiss);
-    }
-  }else if(animation ==3){
-    for(int j=0;j<NUMSTRIPES;j++){
-      for(int i=0;i<STRIPELENGTH;i++){
-        if(i!=anders){
-          strip.setPixelColor(i+j*STRIPELENGTH,gelb);
-          strip2.setPixelColor(i+j*STRIPELENGTH,gelb);
-        }
-      }
-      strip.setPixelColor(anders+j*STRIPELENGTH,orange);
-      strip2.setPixelColor(anders+j*STRIPELENGTH,orange);
-    }
-     anders++; 
-     delay(100);
-     if(anders==STRIPELENGTH){
-      anders=0;
-    //  animation=1;
-     }
-  }
-  strip.show();
-  //delay(500);
-*/

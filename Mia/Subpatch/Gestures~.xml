@@ -4,26 +4,18 @@
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE systemname="KinectData" filename="SubSubpatch\KinectData.v4p" nodename="SubSubpatch\KinectData.v4p" componentmode="InAWindow" id="1">
-   <BOUNDS type="Node" left="3525" top="240" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="18150" top="3825" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="Kinect Runtime" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Gesture (Kinect2 Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\kinect2\VVVV.DX11.Nodes.Kinect2.dll" nodename="Gesture (Kinect2 Microsoft)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="3510" top="990" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Kinect Runtime" visible="1">
+   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Gesture Detected" visible="1">
    </PIN>
    <PIN pinname="Gesture Confidence" visible="1">
    </PIN>
+   <PIN pinname="Gesture File" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="2" dstpinname="Kinect Runtime">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
    <BOUNDS type="Box" left="3855" top="1710" width="480" height="480">
    </BOUNDS>
@@ -189,5 +181,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Down Edge" dstnodeid="14" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="15">
+   <BOUNDS type="Box" left="5160" top="525" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5160" top="525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Gesture File|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="2" dstpinname="Gesture File">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16">
+   <BOUNDS type="Box" left="3255" top="450" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3255" top="450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Kinect Runtime|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="2" dstpinname="Kinect Runtime">
    </LINK>
    </PATCH>

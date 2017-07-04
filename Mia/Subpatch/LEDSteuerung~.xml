@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
-   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\LED-Versuch.v4p" scrollx="0" scrolly="1080" systemname="LED-Versuch" filename="C:\Users\Lisa\Desktop\P6-Projekt\LED-Versuch.v4p">
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\LEDSteuerung.v4p" scrollx="0" scrolly="0" systemname="LED-Versuch" filename="C:\Users\Lisa\Desktop\P6-Projekt\LED-Versuch.v4p">
    <BOUNDS type="Window" left="7695" top="1230" width="11460" height="8685">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -278,6 +278,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Ruhemodus">
    </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Set 4">

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
-   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" systemname="InsideMia" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" scrollx="30" scrolly="0">
-   <BOUNDS type="Window" left="11895" top="1290" width="9000" height="6000">
+   <PATCH nodename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" systemname="InsideMia" filename="C:\Users\Thamar\Documents\1Hochschule\6 Semester (SS17)\Projekt\Umsetzung\MIA\Mia\Subpatch\SubSubpatch\InsideMia.v4p" scrollx="30" scrolly="1440">
+   <BOUNDS type="Window" left="11865" top="0" width="9000" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -34,28 +34,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52">
-   <BOUNDS type="Box" left="2280" top="390" width="1200" height="780">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2280" top="390" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.249999985098839,1.14999985694885">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="UIObjects">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="57">
@@ -93,9 +71,9 @@
    <LINK srcnodeid="63" srcpinname="Transform Out" dstnodeid="57" dstpinname="Transform">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64">
-   <BOUNDS type="Box" left="5685" top="480" width="795" height="720">
+   <BOUNDS type="Box" left="5670" top="180" width="795" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="5685" top="480" width="0" height="0">
+   <BOUNDS type="Node" left="5670" top="180" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
    </PIN>
@@ -133,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6765" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.56,0.54,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.38,0.39,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -252,10 +230,8 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 1">
-   </LINK>
-   <NODE id="50" componentmode="InAWindow" systemname="HitQuad" filename="%VVVV%\girlpower\Transformations\Drag\Subpatches\HitQuad.v4p" nodename="Subpatches\HitQuad.v4p" stayontop="0">
-   <BOUNDS type="Window" left="-630" top="6945" width="5190" height="4605">
+   <NODE id="50" componentmode="Hidden" systemname="HitQuad" filename="%VVVV%\girlpower\Transformations\Drag\Subpatches\HitQuad.v4p" nodename="Subpatches\HitQuad.v4p" stayontop="0">
+   <BOUNDS type="Window" left="1425" top="5100" width="5190" height="4605">
    </BOUNDS>
    <BOUNDS type="Node" left="3990" top="2910" width="855" height="270">
    </BOUNDS>
@@ -277,5 +253,21 @@
    <LINK srcnodeid="62" srcpinname="XY" dstnodeid="50" dstpinname="Mouse PositionXY">
    </LINK>
    <LINK srcnodeid="68" srcpinname="XY" dstnodeid="50" dstpinname="ScaleXY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78">
+   <BOUNDS type="Box" left="2820" top="930" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2820" top="930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="UIElements">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 1">
    </LINK>
    </PATCH>

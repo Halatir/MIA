@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SolutionFile>
+		<Header>
+			<Date>2017-07-04</Date>
+			<Time>21:35:58.7403512+02:00</Time>
+			<Version>1</Version>
+			<Type>Solution</Type>
+			<ID>4ec6dfe2-c266-4269-ab1a-40a7c99f4153</ID>
+		</Header>
+		<Solution_Data>
+			<Files>
+				<Name />
+				<Content>
+					<Items>
+						<File>Karte.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Karte.a.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Kellner.vgbproj</File>
+					</Items>
+					<Items>
+						<File>Kellner.a.vgbproj</File>
+					</Items>
+				</Content>
+			</Files>
+		</Solution_Data>
+		<UI_State />
+		<Attributes />
+	</SolutionFile>
+</GestureBuilderFile>
